@@ -11,6 +11,7 @@
 - ⚡ **Dual AI Modes**: Cloud-based Groq API for speed or local Ollama for privacy.
 
 ## 🧱 Project Structure
+```bash
 ai-scraper/
 ├── groq api/                # Cloud-powered scraping with Groq
 │   ├── main.py              # Streamlit app for Groq
@@ -20,8 +21,9 @@ ai-scraper/
 │   ├── main.py              # Streamlit app for Ollama
 │   ├── parse.py             # LLaMA3 parsing logic
 │   ├── scrape.py            # Web scraping and cleaning
-├── requirements.txt          # Python dependencies
+├── requirements.txt         # Python dependencies
 └── README.md                # You’re here!
+```
 
 ## ⚙️ Requirements
 
