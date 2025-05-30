@@ -17,7 +17,7 @@ if st.button("Scrape site"):
     result=scrape_web(url)
     body_content=extract_body(result)
     clean_body=clean_body_content(body_content)
-    
+
     st.session_state.dom_content=clean_body
 
     with st.expander("View dom content"):
