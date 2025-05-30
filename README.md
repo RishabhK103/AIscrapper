@@ -1,14 +1,16 @@
-🕷️ AI Scraper: Web Crunching with Brains!
-AI Scraper is your go-to tool for ripping through websites and pulling out exactly what you need. Built with Streamlit, Selenium, and BeautifulSoup, it scrapes, cleans, and parses web content using either Groq’s API for cloud-powered speed or Ollama’s LLaMA3 for local AI muscle. Describe what you want in plain English, and let the AI do the heavy lifting!
-🚀 Why It Rocks
+# 🕷️ AI Scraper: Web Crunching with Brains!
 
-🕸️ Scrape Any Site: Grab raw HTML from any URL with a headless browser.
-🧼 Clean It Up: Strip out scripts, styles, and junk for pristine text.
-📜 Peek at the DOM: View the cleaned content in a neat, expandable UI.
-🧠 Smart Extraction: Ask for specific data (e.g., “Grab all product prices”) and get it, thanks to Groq or Ollama.
-⚡ Dual AI Modes: Cloud-based Groq API for speed or local Ollama for privacy.
+**AI Scraper** is your go-to tool for ripping through websites and pulling out exactly what you need. Built with **Streamlit**, **Selenium**, and **BeautifulSoup**, it scrapes, cleans, and parses web content using either **Groq’s API** for cloud-powered speed or **Ollama’s LLaMA3** for local AI muscle. Describe what you want in plain English, and let the AI do the heavy lifting!
 
-🧱 Project Structure
+## 🚀 Why It Rocks
+
+- 🕸️ **Scrape Any Site**: Grab raw HTML from any URL with a headless browser.
+- 🧼 **Clean It Up**: Strip out scripts, styles, and junk for pristine text.
+- 📜 **Peek at the DOM**: View the cleaned content in a neat, expandable UI.
+- 🧠 **Smart Extraction**: Ask for specific data (e.g., “Grab all product prices”) and get it, thanks to Groq or Ollama.
+- ⚡ **Dual AI Modes**: Cloud-based Groq API for speed or local Ollama for privacy.
+
+## 🧱 Project Structure
 ai-scraper/
 ├── groq api/                # Cloud-powered scraping with Groq
 │   ├── main.py              # Streamlit app for Groq
@@ -21,102 +23,99 @@ ai-scraper/
 ├── requirements.txt          # Python dependencies
 └── README.md                # You’re here!
 
-⚙️ Requirements
+## ⚙️ Requirements
 
-Python: 3.11+
-Chrome + ChromeDriver: Configured at /usr/bin/chromedriver (tweak in scrape.py if needed).
-Groq API Key (Groq mode): Stored in a .env file.
-Ollama (local mode): LLaMA3 model installed and running.
-Dependencies (from requirements.txt):
-streamlit
-beautifulsoup4
-selenium
-langchain
-langchain-community
-langchain-core
-langchain-ollama
+- **Python**: 3.11+
+- **Chrome + ChromeDriver**: Configured at `/usr/bin/chromedriver` (tweak in `scrape.py` if needed).
+- **Groq API Key** (Groq mode): Stored in a `.env` file.
+- **Ollama** (local mode): LLaMA3 model installed and running.
+- **Dependencies** (from `requirements.txt`):
+  - `streamlit`
+  - `beautifulsoup4`
+  - `selenium`
+  - `langchain`
+  - `langchain-community`
+  - `langchain-core`
+  - `langchain-ollama`
 
+## 🧪 Installation
 
+1. **Clone the Repo**:
+   ```bash
+   git clone https://github.com/yourusername/ai-scraper.git
+   cd ai-scraper
+   ```
 
-🧪 Installation
+2. **Set Up a Virtual Environment (optional but recommended)**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-Clone the Repo:
-git clone https://github.com/yourusername/ai-scraper.git
-cd ai-scraper
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+4. **Set Up ChromeDriver**:
+   Install ChromeDriver and ensure it’s at /usr/bin/chromedriver or update the path in scrape.py.
 
-Set Up a Virtual Environment (optional but recommended):
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+5. **For Groq API**:
+   Create a .env file in `groq api/`:
+   ```bash
+   GROQ_API_KEY=your-groq-api-key
+   ```
 
+6. **For Ollama**:
+   Install Ollama and pull LLaMA3:
+   ```bash
+   ollama pull llama3
+   ollama run llama3
+   ```
 
-Install Dependencies:
-pip install -r requirements.txt
+## ✍️ How to Use
 
+1. **Fire It Up**:
 
-Set Up ChromeDriver:
+   - For Groq API:
+     ```bash
+     cd groq\ api
+     streamlit run main.py
+     ```
 
-Install ChromeDriver and ensure it’s at /usr/bin/chromedriver or update the path in scrape.py.
+   - For Ollama:
+     ```bash
+     cd local\ with\ ollama
+     streamlit run main.py
+     ```
 
+2. **Scrape & Parse**:
 
-For Groq API:
+   - Open http://localhost:8501 in your browser.
+   - Enter a URL (e.g., https://example.com) and hit Scrape Site.
+   - Check the cleaned DOM content in the expandable section.
+   - Type what you want to extract (e.g., “List all email addresses”) and click Parse Content.
+   - Boom! Your results appear.
 
-Create a .env file in groq api/:GROQ_API_KEY=your-groq-api-key
+## 🧠 Example Use Cases
 
+- 🛒 Scrape product names and prices from e-commerce sites.
+- 📰 Summarize articles or extract headlines from news pages.
+- 📧 Pull contact info or FAQs from business websites.
 
+## 🔒 Notes
 
+- **Chunking**: Large pages are split into 3000-character chunks for efficient parsing.
+- **Groq vs. Ollama**: Groq’s fast but needs internet; Ollama’s local but needs a beefy machine.
+- **Respect the Web**: Check robots.txt and site terms before scraping.
+- **Limitations**: Not optimized for JavaScript-heavy sites or SPAs requiring dynamic rendering.
 
-For Ollama:
+## 🛠️ Troubleshooting
 
-Install Ollama and pull LLaMA3:ollama pull llama3
-ollama run llama3
+- **ChromeDriver Issues**: Ensure ChromeDriver matches your Chrome version.
+- **Ollama Errors**: Verify LLaMA3 is running (`ollama run llama3`).
+- **Vague Results**: Refine your parse description for better LLM accuracy.
 
+## 📜 License
 
-
-
-
-✍️ How to Use
-
-Fire It Up:
-
-For Groq API:cd groq\ api
-streamlit run main.py
-
-
-For Ollama:cd local\ with\ ollama
-streamlit run main.py
-
-
-
-
-Scrape & Parse:
-
-Open http://localhost:8501 in your browser.
-Enter a URL (e.g., https://example.com) and hit Scrape Site.
-Check the cleaned DOM content in the expandable section.
-Type what you want to extract (e.g., “List all email addresses”) and click Parse Content.
-Boom! Your results appear.
-
-
-
-🧠 Example Use Cases
-
-🛒 Scrape product names and prices from e-commerce sites.
-📰 Summarize articles or extract headlines from news pages.
-📧 Pull contact info or FAQs from business websites.
-
-🔒 Notes
-
-Chunking: Large pages are split into 3000-character chunks for efficient parsing.
-Groq vs. Ollama: Groq’s fast but needs internet; Ollama’s local but needs a beefy machine.
-Respect the Web: Check robots.txt and site terms before scraping.
-Limitations: Not optimized for JavaScript-heavy sites or SPAs requiring dynamic rendering.
-
-🛠️ Troubleshooting
-
-ChromeDriver Issues: Ensure ChromeDriver matches your Chrome version.
-Ollama Errors: Verify LLaMA3 is running (ollama run llama3).
-Vague Results: Refine your parse description for better LLM accuracy.
-
-📜 License
 MIT License—hack it, share it, make it yours!
