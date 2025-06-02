@@ -25,9 +25,8 @@ if st.button("Scrape site"):
 if "dom_content" in st.session_state:
     parse_description=st.text_area("Describe what you want to parse")
 
-    if st.button("Parse content"):
+    if st.button("Ask AI ✨"):
         if parse_description:
-            st.write("Parsing content")
 
             dom_chunks=split_dom_content(st.session_state.dom_content)
             print(dom_chunks)

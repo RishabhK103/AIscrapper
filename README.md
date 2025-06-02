@@ -1,5 +1,7 @@
 # 🕷️ AI Scraper: Web Crunching with Brains!
 
+![](assets/demo.png)
+
 **AI Scraper** is your go-to tool for ripping through websites and pulling out exactly what you need. Built with **Streamlit**, **Selenium**, and **BeautifulSoup**, it scrapes, cleans, and parses web content using either **Groq’s API** for cloud-powered speed or **Ollama’s LLaMA3** for local AI muscle. Describe what you want in plain English, and let the AI do the heavy lifting!
 
 ## 🚀 Why It Rocks
@@ -11,6 +13,7 @@
 - ⚡ **Dual AI Modes**: Cloud-based Groq API for speed or local Ollama for privacy.
 
 ## 🧱 Project Structure
+
 ```bash
 ai-scraper/
 ├── groq api/                # Cloud-powered scraping with Groq
@@ -43,18 +46,21 @@ ai-scraper/
 ## 🧪 Installation
 
 1. **Clone the Repo**:
+
    ```bash
    git clone https://github.com/yourusername/ai-scraper.git
    cd ai-scraper
    ```
 
 2. **Set Up a Virtual Environment (optional but recommended)**:
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. **Install Dependencies**:
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -64,6 +70,7 @@ ai-scraper/
 
 5. **For Groq API**:
    Create a .env file in `groq api/`:
+
    ```bash
    GROQ_API_KEY=your-groq-api-key
    ```
@@ -80,6 +87,7 @@ ai-scraper/
 1. **Fire It Up**:
 
    - For Groq API:
+
      ```bash
      cd groq\ api
      streamlit run main.py
@@ -118,6 +126,6 @@ ai-scraper/
 - **Ollama Errors**: Verify LLaMA3 is running (`ollama run llama3`).
 - **Vague Results**: Refine your parse description for better LLM accuracy.
 
-## 📜 License
+## Demo
 
-MIT License—hack it, share it, make it yours!
+![Demo](assets/demo.gif)
